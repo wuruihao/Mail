@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        // 创建 根控制器
+        print(NSUserDefaults.standardUserDefaults().boolForKey(YMFirstLaunch))
+        // 检测用户是不是第一次启动
+        if !NSUserDefaults.standardUserDefaults().boolForKey(YMFirstLaunch) {
+            // 是第一次启动
+            let navi = ETNavigationController(rootViewController: LoginViewController())
+            navi.navigationBar.hidden = true
+            window?.rootViewController = navi
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: YMFirstLaunch)
+        } else {
+            let tabBarController = ETTabBarController()
+            window?.rootViewController = tabBarController
+        }
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
