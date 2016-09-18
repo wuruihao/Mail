@@ -14,8 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var tabBarController: ETTabBarController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // 创建 根控制器
         print(NSUserDefaults.standardUserDefaults().boolForKey(YMFirstLaunch))
@@ -27,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = navi
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: YMFirstLaunch)
         } else {
-            let tabBarController = ETTabBarController()
+            tabBarController = ETTabBarController()
             window?.rootViewController = tabBarController
         }
         window?.makeKeyAndVisible()

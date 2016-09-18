@@ -11,6 +11,8 @@ import UIKit
 class HomeController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sanpImage: UIImageView!
     
     var dataSoure : NSMutableArray!
     var collectionView: UICollectionView!
@@ -19,6 +21,12 @@ class HomeController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let title = NSUserDefaults().objectForKey(userNickname) as! String!
+        if title != nil {
+            titleLabel.text = "您好, \(title)"
+        }
+        
         //模拟数据
         demoData()
         
@@ -112,7 +120,9 @@ class HomeController: UIViewController,UICollectionViewDelegate,UICollectionView
             
             break
         case 1:
-            self.navigationController?.pushViewController(NotifyController(), animated: true)
+            
+            tabBarController?.selectedIndex = 1
+            
             break
         case 2:
             let applicationVC = ApplicationController()
@@ -121,13 +131,16 @@ class HomeController: UIViewController,UICollectionViewDelegate,UICollectionView
             break
         case 3:
             
-            alert.title = "个人中心"
-            alert.show()
-            let time: NSTimeInterval = 1.0
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue()) { () -> Void in
-                alert.dismissWithClickedButtonIndex(0, animated: true)
-            }
+            tabBarController?.selectedIndex = 3
+            /*
+             alert.title = "个人中心"
+             alert.show()
+             let time: NSTimeInterval = 1.0
+             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+             dispatch_after(delayTime, dispatch_get_main_queue()) { () -> Void in
+             alert.dismissWithClickedButtonIndex(0, animated: true)
+             }
+             */
             break
         case 4:
             alert.title = "备忘录"

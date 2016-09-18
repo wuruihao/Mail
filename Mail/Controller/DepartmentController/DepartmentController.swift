@@ -97,9 +97,9 @@ class DepartmentController: UIViewController ,UITableViewDataSource,UITableViewD
         label.text = self .tableView(tableView, titleForHeaderInSection: section)
         view.addSubview(label)
         return view
-    }
+    }    /*
     
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -8,7 +8,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineController" customModule="EnjoytouchMail" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineController" customModule="Mail" customModuleProvider="target">
             <connections>
                 <outlet property="name" destination="Kzm-P9-9li" id="5gR-BN-0ho"/>
                 <outlet property="online" destination="EHU-nu-EBG" id="4j7-ci-4gJ"/>
@@ -18,41 +18,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Me-8I-ZLP">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Me-8I-ZLP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="AB2-C2-ol0"/>
                     </constraints>
+                    <color key="barTintColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="更多" id="Txf-ey-Zgf"/>
                     </items>
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-Nj-fE6" userLabel="headView">
-                    <rect key="frame" x="0.0" y="64" width="600" height="120"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="133"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_none.png" translatesAutoresizingMaskIntoConstraints="NO" id="c04-42-tzM">
-                            <rect key="frame" x="10" y="15" width="90" height="90"/>
+                            <rect key="frame" x="10" y="17" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="c04-42-tzM" secondAttribute="height" multiplier="1:1" id="PrL-xR-kDB"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="瑞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-P9-9li">
-                            <rect key="frame" x="110" y="15" width="18" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="瑞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-P9-9li">
+                            <rect key="frame" x="120" y="17" width="16" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="MRW-KS-8Ei">
-                            <rect key="frame" x="576" y="53" width="14" height="15"/>
+                            <rect key="frame" x="349" y="58" width="16" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="MRW-KS-8Ei" secondAttribute="height" multiplier="12:13" id="1xe-i1-1cv"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="手机在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-nu-EBG">
-                            <rect key="frame" x="110" y="84" width="70" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-nu-EBG">
+                            <rect key="frame" x="120" y="97" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -71,21 +75,21 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-YL-eyy" userLabel="个人资料">
-                    <rect key="frame" x="10" y="194" width="580" height="40"/>
+                    <rect key="frame" x="10" y="207" width="355" height="45"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_dingdan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yeb-zS-3nB">
-                            <rect key="frame" x="15" y="10" width="20" height="20"/>
+                            <rect key="frame" x="15" y="12" width="22" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Yeb-zS-3nB" secondAttribute="height" multiplier="1:1" id="bNN-6K-evh"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="个人资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-91-edI">
-                            <rect key="frame" x="50" y="10" width="70" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-91-edI">
+                            <rect key="frame" x="52" y="13" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vrw-86-wUE">
-                            <rect key="frame" x="561" y="15" width="9" height="10"/>
+                            <rect key="frame" x="335" y="17" width="10" height="11"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Vrw-86-wUE" secondAttribute="height" multiplier="12:13" id="5Bp-yi-dyq"/>
                             </constraints>
@@ -108,21 +112,21 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-on-AKq" userLabel="修改密码">
-                    <rect key="frame" x="10" y="235" width="580" height="40"/>
+                    <rect key="frame" x="10" y="253" width="355" height="45"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_dizhi.png" translatesAutoresizingMaskIntoConstraints="NO" id="uPO-EL-MdP">
-                            <rect key="frame" x="15" y="10" width="19" height="20"/>
+                            <rect key="frame" x="15" y="11" width="22" height="23"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="uPO-EL-MdP" secondAttribute="height" multiplier="30:31" id="bMt-x1-naN"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="修改密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HY-Hd-5bU">
-                            <rect key="frame" x="49" y="10" width="70" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HY-Hd-5bU">
+                            <rect key="frame" x="52" y="13" width="64" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="1dR-26-tqr">
-                            <rect key="frame" x="561" y="15" width="9" height="10"/>
+                            <rect key="frame" x="334" y="17" width="11" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="1dR-26-tqr" secondAttribute="height" multiplier="12:13" id="Xfv-5Z-k6B"/>
                             </constraints>
@@ -145,21 +149,21 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plc-xd-i9r" userLabel="设置">
-                    <rect key="frame" x="10" y="285" width="580" height="40"/>
+                    <rect key="frame" x="10" y="308" width="355" height="45"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_dingdan.png" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-o4-xbK">
-                            <rect key="frame" x="15" y="10" width="20" height="20"/>
+                            <rect key="frame" x="15" y="11" width="23" height="23"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="j3a-o4-xbK" secondAttribute="height" multiplier="1:1" id="GLq-0h-dcE"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctT-fm-0KB">
-                            <rect key="frame" x="50" y="10" width="35" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctT-fm-0KB">
+                            <rect key="frame" x="53" y="13" width="32" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="xim-am-wQ9">
-                            <rect key="frame" x="561" y="15" width="9" height="10"/>
+                            <rect key="frame" x="335" y="17" width="10" height="11"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="xim-am-wQ9" secondAttribute="height" multiplier="12:13" id="aeQ-8P-TfL"/>
                             </constraints>
@@ -182,21 +186,21 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpu-1h-zEc" userLabel="注销">
-                    <rect key="frame" x="10" y="326" width="580" height="40"/>
+                    <rect key="frame" x="10" y="354" width="355" height="45"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_dizhi.png" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-FR-oSz">
-                            <rect key="frame" x="15" y="10" width="19" height="20"/>
+                            <rect key="frame" x="15" y="11" width="22" height="23"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="c2j-FR-oSz" secondAttribute="height" multiplier="30:31" id="RLo-dr-JiL"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="注销" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA4-5o-mdS">
-                            <rect key="frame" x="49" y="10" width="35" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注销" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA4-5o-mdS">
+                            <rect key="frame" x="52" y="13" width="32" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="J77-Pc-76T">
-                            <rect key="frame" x="561" y="15" width="9" height="10"/>
+                            <rect key="frame" x="335" y="17" width="10" height="11"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="J77-Pc-76T" secondAttribute="height" multiplier="12:13" id="JTd-yl-nqp"/>
                             </constraints>
@@ -246,6 +250,7 @@
                 <constraint firstItem="aZz-on-AKq" firstAttribute="height" secondItem="ddw-YL-eyy" secondAttribute="height" id="oWn-pR-MrW"/>
                 <constraint firstItem="ddw-YL-eyy" firstAttribute="height" secondItem="Jv4-Nj-fE6" secondAttribute="height" multiplier="1:3" id="uj0-SW-YvA"/>
             </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="58" y="-1462"/>
         </view>
         <tapGestureRecognizer id="6NH-r8-IFI">

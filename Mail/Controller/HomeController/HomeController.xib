@@ -8,9 +8,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="EnjoytouchMail" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="Mail" customModuleProvider="target">
             <connections>
+                <outlet property="sanpImage" destination="NFU-ap-xXj" id="yhh-G7-3II"/>
                 <outlet property="timeLabel" destination="TQn-ps-lxw" id="TQE-Ur-ss4"/>
+                <outlet property="titleLabel" destination="e6a-Jq-juC" id="6va-bL-PpH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,7 +43,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.031068716199999999" green="0.044616676869999997" blue="0.04488297552" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="NFU-ap-xXj" firstAttribute="leading" secondItem="HOh-hi-JvK" secondAttribute="leading" constant="15" id="6OX-1f-UBu"/>
                         <constraint firstItem="e6a-Jq-juC" firstAttribute="width" secondItem="HOh-hi-JvK" secondAttribute="width" multiplier="1:3" id="Tx2-Kk-fni"/>

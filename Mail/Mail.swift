@@ -8,6 +8,16 @@
 
 import UIKit
 
+let userID = "userID"
+let userSex = "userSex"
+let userMobile = "userMobile"
+let userToken = "userToken"
+let userLevel = "userLevel"
+let userHeadImg = "userHeadImg"
+let userNickname = "userNickname"
+let userDepartment = "userDepartment"
+
+
 let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 

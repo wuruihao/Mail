@@ -22,19 +22,23 @@ class MineController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     /*个人资料*/
-    @IBAction func chickSeeMyInfo(_ sender: AnyObject) {
-        print("个人资料")
+    @IBAction func chickSeeMyInfo(sender: AnyObject) {
+        
+        let memberVC = MemberInfoController()
+        memberVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(memberVC, animated: true)
+        
     }
     /*修改密码*/
-    @IBAction func modifyPassword(_ sender: AnyObject) {
+    @IBAction func modifyPassword(sender: AnyObject) {
         print("修改密码")
     }
     /*设置*/
-    @IBAction func setupConfigure(_ sender: AnyObject) {
+    @IBAction func setupConfigure(sender: AnyObject) {
         print("设置")
     }
     /*注销*/
-    @IBAction func logout(_ sender: AnyObject) {
+    @IBAction func logout(sender: AnyObject) {
         print("注销")
     }
 }

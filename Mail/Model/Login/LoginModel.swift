@@ -10,11 +10,11 @@ import UIKit
 
 class LoginData: NSObject {
     
-    var id:         String?
+    var id:         Int?
     var sex:        String?
     var mobile:     String?
     var token:      String?
-    var level:      String?
+    var level_name: String?
     var head_img:   String?
     var nickname:   String?
     var department: String?

@@ -35,7 +35,7 @@ class NetworkTool: NSObject {
         return false
     }
     //登陆请求
-    func loginRequest(phone: String, password: String, finishedSel:(data: [LoginData])->(),failedSel:(error: [ETError])->()){
+    func loginRequest(phone: String, password: String, finishedSel:(data: LoginData)->(),failedSel:(error: ETError)->()){
         
         let url = BASE_URL+"/login"
         let params = ["mobile": phone,
@@ -63,17 +63,17 @@ class NetworkTool: NSObject {
                 //print(data)
                 // 字典转模型(MJExtension)
                 let loginData = LoginData.mj_objectWithKeyValues(data)
-                finishedSel(data: [loginData])
+                finishedSel(data: loginData)
             }else{
                 let errorDic = result?.objectForKey("error")
                 let error = ETError.mj_objectWithKeyValues(errorDic) as ETError
-                failedSel(error: [error])
+                failedSel(error: error)
             }
         }
     }
     
     //注册请求
-    func registerRequest(phone: String, password: String, finishedSel:(data: [LoginData])->(),failedSel:(error: [ETError])->()){
+    func registerRequest(phone: String, password: String, finishedSel:(data: LoginData)->(),failedSel:(error: ETError)->()){
         
         let url = BASE_URL+"/a3/login/index"
         let params = ["mobile": phone,
@@ -101,11 +101,11 @@ class NetworkTool: NSObject {
                 //print(data)
                 // 字典转模型(MJExtension)
                 let loginData = LoginData.mj_objectWithKeyValues(data)
-                finishedSel(data: [loginData])
+                finishedSel(data: loginData)
             }else{
                 let errorDic = result?.objectForKey("error")
                 let error = ETError.mj_objectWithKeyValues(errorDic) as ETError
-                failedSel(error: [error])
+                failedSel(error: error)
             }
         }
     }
@@ -113,7 +113,7 @@ class NetworkTool: NSObject {
     //组织架构
     func departmentRequest(finishedSel:(data: [DepartmentData])->(),failedSel:(error: [ETError])->()){
         
-        let url = BASE_URL+"/a3/login/index"
+        let url = BASE_URL+"/user/list"
         let token = "1"
         let params = ["token": token]
         

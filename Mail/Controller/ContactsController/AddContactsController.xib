@@ -7,7 +7,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddContactsController" customModule="EnjoytouchMail" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddContactsController" customModule="Mail" customModuleProvider="target">
             <connections>
                 <outlet property="companyTextField" destination="nMX-Ug-z1r" id="6xh-sE-N6y"/>
                 <outlet property="departmentTextField" destination="BHI-s3-n0p" id="w6Q-Ox-bHB"/>
@@ -29,11 +29,15 @@
                         <constraint firstAttribute="width" secondItem="FGx-06-cFL" secondAttribute="height" multiplier="1:1" id="FOK-1f-x2O"/>
                     </constraints>
                 </imageView>
-                <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-Xi-vgc">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-Xi-vgc">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="9tr-Fj-wSA"/>
                     </constraints>
+                    <color key="barTintColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="添加联系人" id="obA-o7-5Su">
                             <barButtonItem key="leftBarButtonItem" image="clear.png" id="pwG-hf-s88">
@@ -46,7 +50,7 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="sge-W4-m15">
+                            <barButtonItem key="rightBarButtonItem" title="Item" id="sge-W4-m15">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L6J-RE-2kP">
                                     <rect key="frame" x="309" y="29" width="50" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,8 +74,8 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-CK-nta">
-                            <rect key="frame" x="0.0" y="15" width="92" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="15" width="92" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -81,8 +85,8 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作邮箱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8T-Wg-bmM">
-                            <rect key="frame" x="0.0" y="55" width="92" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="55" width="92" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -92,8 +96,8 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBK-qk-uDo">
-                            <rect key="frame" x="0.0" y="95" width="92" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="95" width="92" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -105,9 +109,11 @@
                         <constraint firstItem="nMX-Ug-z1r" firstAttribute="leading" secondItem="Ium-mC-Cg6" secondAttribute="leading" id="87g-jU-QGo"/>
                         <constraint firstItem="nMX-Ug-z1r" firstAttribute="top" secondItem="tRG-V8-Ah1" secondAttribute="bottom" constant="10" id="98G-NR-DI5"/>
                         <constraint firstItem="tRG-V8-Ah1" firstAttribute="trailing" secondItem="Ium-mC-Cg6" secondAttribute="trailing" id="9lL-qP-ba7"/>
+                        <constraint firstItem="tRG-V8-Ah1" firstAttribute="bottom" secondItem="M8T-Wg-bmM" secondAttribute="bottom" id="9uK-2u-cXF"/>
                         <constraint firstItem="Ium-mC-Cg6" firstAttribute="top" secondItem="MEH-CK-nta" secondAttribute="top" id="Bg6-WR-cyX"/>
                         <constraint firstItem="Ium-mC-Cg6" firstAttribute="leading" secondItem="MEH-CK-nta" secondAttribute="trailing" id="DAL-OX-4rb"/>
                         <constraint firstItem="M8T-Wg-bmM" firstAttribute="trailing" secondItem="MEH-CK-nta" secondAttribute="trailing" id="JmH-pb-0Nt"/>
+                        <constraint firstItem="nMX-Ug-z1r" firstAttribute="bottom" secondItem="TBK-qk-uDo" secondAttribute="bottom" id="S3e-Ww-TcV"/>
                         <constraint firstItem="nMX-Ug-z1r" firstAttribute="top" secondItem="tRG-V8-Ah1" secondAttribute="bottom" constant="10" id="Sby-G1-co7"/>
                         <constraint firstItem="nMX-Ug-z1r" firstAttribute="top" secondItem="TBK-qk-uDo" secondAttribute="top" id="TGk-yb-0Yz"/>
                         <constraint firstItem="MEH-CK-nta" firstAttribute="leading" secondItem="pXG-Ws-psW" secondAttribute="leading" id="azs-vR-Qy4"/>
@@ -115,6 +121,7 @@
                         <constraint firstItem="tRG-V8-Ah1" firstAttribute="top" secondItem="Ium-mC-Cg6" secondAttribute="bottom" constant="10" id="cCD-5C-6lK"/>
                         <constraint firstAttribute="bottom" secondItem="nMX-Ug-z1r" secondAttribute="bottom" constant="15" id="csk-6F-VGs"/>
                         <constraint firstItem="nMX-Ug-z1r" firstAttribute="trailing" secondItem="Ium-mC-Cg6" secondAttribute="trailing" id="e0d-nr-faJ"/>
+                        <constraint firstItem="Ium-mC-Cg6" firstAttribute="bottom" secondItem="MEH-CK-nta" secondAttribute="bottom" id="gu2-h4-Fmb"/>
                         <constraint firstItem="tRG-V8-Ah1" firstAttribute="leading" secondItem="Ium-mC-Cg6" secondAttribute="leading" id="jI6-Hu-YrV"/>
                         <constraint firstItem="MEH-CK-nta" firstAttribute="top" secondItem="pXG-Ws-psW" secondAttribute="top" constant="15" id="ldN-b3-HTS"/>
                         <constraint firstItem="M8T-Wg-bmM" firstAttribute="leading" secondItem="MEH-CK-nta" secondAttribute="leading" id="tkS-lV-6eP"/>

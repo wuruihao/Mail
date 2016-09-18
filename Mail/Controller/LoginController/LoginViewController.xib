@@ -7,7 +7,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EnjoytouchMail" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Mail" customModuleProvider="target">
             <connections>
                 <outlet property="loginBtn" destination="ReQ-4e-XPf" id="aeZ-On-DM7"/>
                 <outlet property="password" destination="SwB-VS-zz8" id="mko-xT-NKr"/>

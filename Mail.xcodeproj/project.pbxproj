@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		813CEF37C9368066382D2BA0 /* Pods_Mail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC90C3B02C33358F6D13F18 /* Pods_Mail.framework */; };
+		E01CBC341D8E2C600075BEDC /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CBC331D8E2C600075BEDC /* ContactsModel.swift */; };
+		E01CBC3D1D8E45420075BEDC /* MemberInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CBC3B1D8E45420075BEDC /* MemberInfoController.swift */; };
+		E01CBC3E1D8E45420075BEDC /* MemberInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01CBC3C1D8E45420075BEDC /* MemberInfoController.xib */; };
+		E01CBC401D8E54800075BEDC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01CBC3F1D8E54800075BEDC /* AVFoundation.framework */; };
+		E01CBC421D8E6B4C0075BEDC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01CBC411D8E6B4C0075BEDC /* AssetsLibrary.framework */; };
+		E01CBC451D8E743C0075BEDC /* EditNickNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CBC431D8E743C0075BEDC /* EditNickNameController.swift */; };
+		E01CBC461D8E743C0075BEDC /* EditNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01CBC441D8E743C0075BEDC /* EditNickNameController.xib */; };
 		E0490F8B1D88F24F00E7107B /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490EFF1D88F24F00E7107B /* ContactsCell.swift */; };
 		E0490F8C1D88F24F00E7107B /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0490F001D88F24F00E7107B /* ContactsCell.xib */; };
 		E0490F8D1D88F24F00E7107B /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490F021D88F24F00E7107B /* MemberCell.swift */; };
@@ -155,6 +162,13 @@
 		097EC86176AA969408501BB9 /* Pods-Mail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mail/Pods-Mail.release.xcconfig"; sourceTree = "<group>"; };
 		33FD630A4A80ECCC8092E829 /* Pods-Mail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mail/Pods-Mail.debug.xcconfig"; sourceTree = "<group>"; };
 		9AC90C3B02C33358F6D13F18 /* Pods_Mail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01CBC331D8E2C600075BEDC /* ContactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		E01CBC3B1D8E45420075BEDC /* MemberInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberInfoController.swift; sourceTree = "<group>"; };
+		E01CBC3C1D8E45420075BEDC /* MemberInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberInfoController.xib; sourceTree = "<group>"; };
+		E01CBC3F1D8E54800075BEDC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E01CBC411D8E6B4C0075BEDC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E01CBC431D8E743C0075BEDC /* EditNickNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNickNameController.swift; sourceTree = "<group>"; };
+		E01CBC441D8E743C0075BEDC /* EditNickNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditNickNameController.xib; sourceTree = "<group>"; };
 		E0490EFF1D88F24F00E7107B /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		E0490F001D88F24F00E7107B /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
 		E0490F021D88F24F00E7107B /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
@@ -295,6 +309,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01CBC421D8E6B4C0075BEDC /* AssetsLibrary.framework in Frameworks */,
+				E01CBC401D8E54800075BEDC /* AVFoundation.framework in Frameworks */,
 				813CEF37C9368066382D2BA0 /* Pods_Mail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +344,8 @@
 		8B4BD4CB699BD5ECC764937D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E01CBC411D8E6B4C0075BEDC /* AssetsLibrary.framework */,
+				E01CBC3F1D8E54800075BEDC /* AVFoundation.framework */,
 				9AC90C3B02C33358F6D13F18 /* Pods_Mail.framework */,
 			);
 			name = Frameworks;
@@ -650,6 +668,10 @@
 			children = (
 				E0490F871D88F24F00E7107B /* MineController.swift */,
 				E0490F881D88F24F00E7107B /* MineController.xib */,
+				E01CBC3B1D8E45420075BEDC /* MemberInfoController.swift */,
+				E01CBC3C1D8E45420075BEDC /* MemberInfoController.xib */,
+				E01CBC431D8E743C0075BEDC /* EditNickNameController.swift */,
+				E01CBC441D8E743C0075BEDC /* EditNickNameController.xib */,
 			);
 			path = MineController;
 			sourceTree = "<group>";
@@ -658,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				E0490F8A1D88F24F00E7107B /* ContactsEntity.swift */,
+				E01CBC331D8E2C600075BEDC /* ContactsModel.swift */,
 			);
 			path = CodeData;
 			sourceTree = "<group>";
@@ -687,12 +710,12 @@
 		E09536DF1D88F0F5001FBEEC /* Mail */ = {
 			isa = PBXGroup;
 			children = (
-				E0490EFD1D88F24F00E7107B /* View */,
-				E0490F0A1D88F24F00E7107B /* Source */,
-				E0490F561D88F24F00E7107B /* Model */,
-				E0490F5C1D88F24F00E7107B /* Core */,
 				E0490F6D1D88F24F00E7107B /* Controller */,
+				E0490F561D88F24F00E7107B /* Model */,
+				E0490EFD1D88F24F00E7107B /* View */,
+				E0490F5C1D88F24F00E7107B /* Core */,
 				E0490F891D88F24F00E7107B /* CodeData */,
+				E0490F0A1D88F24F00E7107B /* Source */,
 				E09536E01D88F0F5001FBEEC /* AppDelegate.swift */,
 				E09536EA1D88F0F6001FBEEC /* Assets.xcassets */,
 				E09536EC1D88F0F6001FBEEC /* LaunchScreen.storyboard */,
@@ -880,6 +903,7 @@
 				E0490FAB1D88F24F00E7107B /* Mine_dizhi@2x.png in Resources */,
 				E0490FB01D88F24F00E7107B /* Mine_pinpai.png in Resources */,
 				E0490FA01D88F24F00E7107B /* Login_code_hblue.png in Resources */,
+				E01CBC461D8E743C0075BEDC /* EditNickNameController.xib in Resources */,
 				E0490F9E1D88F24F00E7107B /* Login_code_blue.png in Resources */,
 				E0490FCD1D88F24F00E7107B /* TabBar_mine@3x.png in Resources */,
 				E0490F8C1D88F24F00E7107B /* ContactsCell.xib in Resources */,
@@ -905,6 +929,7 @@
 				E0490F9F1D88F24F00E7107B /* Login_code_gray.png in Resources */,
 				E0490F991D88F24F00E7107B /* chat.png in Resources */,
 				E0490FC81D88F24F00E7107B /* TabBar_interesting_sel.png in Resources */,
+				E01CBC3E1D8E45420075BEDC /* MemberInfoController.xib in Resources */,
 				E0490FCE1D88F24F00E7107B /* TabBar_mine_sel.png in Resources */,
 				E0490FC61D88F24F00E7107B /* TabBar_interesting@2x.png in Resources */,
 				E0490FAE1D88F24F00E7107B /* Mine_gray_arrow@2x.png in Resources */,
@@ -993,6 +1018,7 @@
 				E0490F8E1D88F24F00E7107B /* ApplicationCell.swift in Sources */,
 				E0490FDB1D88F24F00E7107B /* FoldingTableView.swift in Sources */,
 				E0490F921D88F24F00E7107B /* MineView.swift in Sources */,
+				E01CBC341D8E2C600075BEDC /* ContactsModel.swift in Sources */,
 				E0490F8B1D88F24F00E7107B /* ContactsCell.swift in Sources */,
 				E0490FE01D88F24F00E7107B /* UITableView+Extension.swift in Sources */,
 				E0490FE51D88F24F00E7107B /* YMConst.swift in Sources */,
@@ -1017,6 +1043,7 @@
 				E05203971D88F6990003A678 /* Mail.swift in Sources */,
 				E0490FD81D88F24F00E7107B /* MemberData.swift in Sources */,
 				E0490FE41D88F24F00E7107B /* NetworkTool.swift in Sources */,
+				E01CBC3D1D8E45420075BEDC /* MemberInfoController.swift in Sources */,
 				E0490FE31D88F24F00E7107B /* ETTabBarController.swift in Sources */,
 				E0490FDC1D88F24F00E7107B /* MyCollectionViewLayout.swift in Sources */,
 				E0490FE61D88F24F00E7107B /* AddContactsController.swift in Sources */,
@@ -1024,6 +1051,7 @@
 				E0490FF61D88F24F00E7107B /* NotifyController.swift in Sources */,
 				E0490FE81D88F24F00E7107B /* ContactsController.swift in Sources */,
 				E0490F8D1D88F24F00E7107B /* MemberCell.swift in Sources */,
+				E01CBC451D8E743C0075BEDC /* EditNickNameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

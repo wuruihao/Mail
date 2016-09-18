@@ -7,7 +7,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditApplyleaveController" customModule="EnjoytouchMail" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditApplyleaveController" customModule="Mail" customModuleProvider="target">
             <connections>
                 <outlet property="beginDay" destination="hzi-EK-zWJ" id="qCZ-y2-aIu"/>
                 <outlet property="endDay" destination="alX-aY-QBQ" id="LMb-pV-ibP"/>
@@ -33,7 +33,7 @@
                     </textAttributes>
                     <items>
                         <navigationItem title="编辑请假信息" id="lAd-j3-AVK">
-                            <barButtonItem key="leftBarButtonItem" style="plain" id="yep-a6-BfM">
+                            <barButtonItem key="leftBarButtonItem" image="clear.png" id="yep-a6-BfM">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kqr-hN-aTX">
                                     <rect key="frame" x="16" y="29" width="25" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,7 +43,7 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" style="plain" id="Iz3-Vd-Vba">
+                            <barButtonItem key="rightBarButtonItem" id="Iz3-Vd-Vba">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DTl-3z-A2g">
                                     <rect key="frame" x="309" y="27" width="50" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,8 +68,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="167"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-Ir-aNG">
-                                            <rect key="frame" x="15" y="15" width="34" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="15" width="32" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -77,8 +77,8 @@
                                             <rect key="frame" x="0.0" y="42" width="345" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年休假" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fse-LR-q9u">
-                                                    <rect key="frame" x="15" y="9" width="51" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="9" width="48" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -105,8 +105,8 @@
                                             <rect key="frame" x="0.0" y="80" width="345" height="87"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请假时长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9og-E7-VTL">
-                                                    <rect key="frame" x="15" y="0.0" width="68" height="87"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="0.0" width="64" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -147,59 +147,59 @@
                                     <rect key="frame" x="0.0" y="167" width="345" height="234"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-gw-d7n">
-                                            <rect key="frame" x="15" y="15" width="68" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="15" width="64" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LS-FF-HJ9">
-                                            <rect key="frame" x="15" y="103" width="68" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="102" width="64" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-09-12 下午" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alX-aY-QBQ">
-                                            <rect key="frame" x="15" y="139" width="131" height="21"/>
+                                            <rect key="frame" x="15" y="137" width="131" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-09-12 下午" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-EK-zWJ">
-                                            <rect key="frame" x="15" y="51" width="131" height="21"/>
+                                            <rect key="frame" x="15" y="50" width="131" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="AG0-jY-UAC">
-                                            <rect key="frame" x="312" y="53" width="18" height="17"/>
+                                            <rect key="frame" x="312" y="52" width="18" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="AG0-jY-UAC" secondAttribute="height" multiplier="13:12" id="luP-z8-vP7"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mine_gray_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-Om-oDZ">
-                                            <rect key="frame" x="312" y="141" width="18" height="17"/>
+                                            <rect key="frame" x="312" y="139" width="18" height="17"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长 天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-9q-4tS">
-                                            <rect key="frame" x="15" y="191" width="56" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="189" width="53" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Op-9V-aID">
-                                            <rect key="frame" x="300" y="182" width="30" height="39"/>
+                                            <rect key="frame" x="300" y="180" width="30" height="39"/>
                                             <color key="backgroundColor" red="0.47843137250000001" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="4Op-9V-aID" secondAttribute="height" multiplier="3:4" id="udv-TY-hgO"/>
                                             </constraints>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA0-a3-Jm1">
-                                            <rect key="frame" x="266" y="191" width="24" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="267" y="189" width="23" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRo-eh-mWb">
-                                            <rect key="frame" x="0.0" y="87" width="345" height="1"/>
+                                            <rect key="frame" x="0.0" y="86" width="345" height="1"/>
                                             <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="nii-3v-edG"/>
@@ -209,7 +209,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3c-eo-TD8">
-                                            <rect key="frame" x="0.0" y="175" width="345" height="1"/>
+                                            <rect key="frame" x="0.0" y="173" width="345" height="1"/>
                                             <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="cDs-G4-5L1"/>
@@ -219,13 +219,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWb-ZY-IZM">
-                                            <rect key="frame" x="0.0" y="43" width="345" height="44"/>
+                                            <rect key="frame" x="0.0" y="42" width="345" height="44"/>
                                             <connections>
                                                 <action selector="beginTime:" destination="-1" eventType="touchUpInside" id="Ndx-2Z-58E"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxv-EB-Zta">
-                                            <rect key="frame" x="0.0" y="131" width="345" height="44"/>
+                                            <rect key="frame" x="0.0" y="129" width="345" height="44"/>
                                             <connections>
                                                 <action selector="endTime:" destination="-1" eventType="touchUpInside" id="a3J-Hp-For"/>
                                             </connections>
@@ -291,15 +291,15 @@
                                     <rect key="frame" x="0.0" y="453" width="345" height="133"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原因" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrs-6L-wV5">
-                                            <rect key="frame" x="15" y="15" width="34" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="15" y="15" width="32" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="安定还记得是健康辅导会尽快发货的接口和发动机可恢复的恢复健康和空间发的好vjkf" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="53K-KU-w9I">
-                                            <rect key="frame" x="15" y="46" width="315" height="87"/>
+                                            <rect key="frame" x="15" y="45" width="315" height="88"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="C2q-Z0-pCy"/>
@@ -393,5 +393,6 @@
     <resources>
         <image name="Mine_gray_arrow.png" width="27" height="27"/>
         <image name="NaviBar_back.png" width="25" height="25"/>
+        <image name="clear.png" width="3" height="3"/>
     </resources>
 </document>
