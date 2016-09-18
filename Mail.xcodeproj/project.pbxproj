@@ -15,6 +15,8 @@
 		E01CBC421D8E6B4C0075BEDC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01CBC411D8E6B4C0075BEDC /* AssetsLibrary.framework */; };
 		E01CBC451D8E743C0075BEDC /* EditNickNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CBC431D8E743C0075BEDC /* EditNickNameController.swift */; };
 		E01CBC461D8E743C0075BEDC /* EditNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01CBC441D8E743C0075BEDC /* EditNickNameController.xib */; };
+		E01CBC491D8E9A170075BEDC /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = E01CBC471D8E9A170075BEDC /* phone.png */; };
+		E01CBC4A1D8E9A170075BEDC /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = E01CBC481D8E9A170075BEDC /* message.png */; };
 		E0490F8B1D88F24F00E7107B /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490EFF1D88F24F00E7107B /* ContactsCell.swift */; };
 		E0490F8C1D88F24F00E7107B /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0490F001D88F24F00E7107B /* ContactsCell.xib */; };
 		E0490F8D1D88F24F00E7107B /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490F021D88F24F00E7107B /* MemberCell.swift */; };
@@ -169,6 +171,8 @@
 		E01CBC411D8E6B4C0075BEDC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E01CBC431D8E743C0075BEDC /* EditNickNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNickNameController.swift; sourceTree = "<group>"; };
 		E01CBC441D8E743C0075BEDC /* EditNickNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditNickNameController.xib; sourceTree = "<group>"; };
+		E01CBC471D8E9A170075BEDC /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		E01CBC481D8E9A170075BEDC /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 		E0490EFF1D88F24F00E7107B /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		E0490F001D88F24F00E7107B /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
 		E0490F021D88F24F00E7107B /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
@@ -425,6 +429,8 @@
 		E0490F0D1D88F24F00E7107B /* Department */ = {
 			isa = PBXGroup;
 			children = (
+				E01CBC471D8E9A170075BEDC /* phone.png */,
+				E01CBC481D8E9A170075BEDC /* message.png */,
 				E0490F0E1D88F24F00E7107B /* Arrow.png */,
 				E0490F0F1D88F24F00E7107B /* icon.png */,
 				E0490F101D88F24F00E7107B /* pic.png */,
@@ -869,6 +875,7 @@
 				E0490FB41D88F24F00E7107B /* Mine_quchu@2x.png in Resources */,
 				E0490FB21D88F24F00E7107B /* Mine_pinpai@3x.png in Resources */,
 				E0490FE71D88F24F00E7107B /* AddContactsController.xib in Resources */,
+				E01CBC4A1D8E9A170075BEDC /* message.png in Resources */,
 				E0490FC41D88F24F00E7107B /* TabBar_home_sel@3x.png in Resources */,
 				E0490FD61D88F24F00E7107B /* TabBar_product_sel@3x.png in Resources */,
 				E0490FD21D88F24F00E7107B /* TabBar_product@2x.png in Resources */,
@@ -931,6 +938,7 @@
 				E0490FC81D88F24F00E7107B /* TabBar_interesting_sel.png in Resources */,
 				E01CBC3E1D8E45420075BEDC /* MemberInfoController.xib in Resources */,
 				E0490FCE1D88F24F00E7107B /* TabBar_mine_sel.png in Resources */,
+				E01CBC491D8E9A170075BEDC /* phone.png in Resources */,
 				E0490FC61D88F24F00E7107B /* TabBar_interesting@2x.png in Resources */,
 				E0490FAE1D88F24F00E7107B /* Mine_gray_arrow@2x.png in Resources */,
 				E0490FC11D88F24F00E7107B /* TabBar_home@3x.png in Resources */,

@@ -35,7 +35,7 @@ class NetworkTool: NSObject {
         return false
     }
     //登陆请求
-    func loginRequest(phone: String, password: String, finishedSel:(data: LoginData)->(),failedSel:(error: ETError)->()){
+    func loginRequest(phone: String, password: String, finishedSel:(data: MemberData)->(),failedSel:(error: ETError)->()){
         
         let url = BASE_URL+"/login"
         let params = ["mobile": phone,
@@ -62,7 +62,7 @@ class NetworkTool: NSObject {
                  */
                 //print(data)
                 // 字典转模型(MJExtension)
-                let loginData = LoginData.mj_objectWithKeyValues(data)
+                let loginData = MemberData.mj_objectWithKeyValues(data)
                 finishedSel(data: loginData)
             }else{
                 let errorDic = result?.objectForKey("error")
@@ -73,7 +73,7 @@ class NetworkTool: NSObject {
     }
     
     //注册请求
-    func registerRequest(phone: String, password: String, finishedSel:(data: LoginData)->(),failedSel:(error: ETError)->()){
+    func registerRequest(phone: String, password: String, finishedSel:(data: MemberData)->(),failedSel:(error: ETError)->()){
         
         let url = BASE_URL+"/a3/login/index"
         let params = ["mobile": phone,
@@ -88,19 +88,10 @@ class NetworkTool: NSObject {
             let result = response.result.value as? NSDictionary
             print("result: \(result)")
             if self.isRequestSuccess(result!){
-                // json 转化成字典
-                // 并进行数据解析
+                //json 转化成字典 并进行数据解析
                 let data = result?.objectForKey("data")
-                /*
-                 if (data != nil && data?.hasSuffix("[") != nil){
-                 print("数组")
-                 }else{
-                 print("字典")
-                 }
-                 */
-                //print(data)
                 // 字典转模型(MJExtension)
-                let loginData = LoginData.mj_objectWithKeyValues(data)
+                let loginData = MemberData.mj_objectWithKeyValues(data)
                 finishedSel(data: loginData)
             }else{
                 let errorDic = result?.objectForKey("error")
@@ -111,15 +102,11 @@ class NetworkTool: NSObject {
     }
 
     //组织架构
-    func departmentRequest(finishedSel:(data: [DepartmentData])->(),failedSel:(error: [ETError])->()){
+    func departmentRequest(finishedSel:(data:[DepartmentData])->(),failedSel:(error:ETError)->()){
         
         let url = BASE_URL+"/user/list"
-        let token = "1"
-        let params = ["token": token]
-        
         print("url: \(url)")
-        print("params: \(params)")
-        Alamofire.request(.GET, url, parameters: params).responseJSON { (response) in
+        Alamofire.request(.GET, url).responseJSON { (response) in
             guard response.result.isSuccess else {
                 print("加载失败...")
                 return
@@ -127,24 +114,22 @@ class NetworkTool: NSObject {
             let result = response.result.value as? NSDictionary
             print("result: \(result)")
             if self.isRequestSuccess(result!){
-                // json 转化成字典
-                // 并进行数据解析
+                 //json 转化成字典 并进行数据解析
                 let data = result?.objectForKey("data")
-                /*
-                 if (data != nil && data?.hasSuffix("[") != nil){
-                 print("数组")
-                 }else{
-                 print("字典")
-                 }
-                 */
-                //print(data)
+                
                 // 字典转模型(MJExtension)
-                let loginData = DepartmentData.mj_objectWithKeyValues(data)
-                finishedSel(data: [loginData])
+                let dataArray = DepartmentData.mj_objectArrayWithKeyValuesArray(data).mutableCopy() as! [DepartmentData]
+                
+                for departmentData:DepartmentData in dataArray {
+                    
+                    print("members\(departmentData.members)")
+                }
+                
+                finishedSel(data: dataArray)
             }else{
                 let errorDic = result?.objectForKey("error")
                 let error = ETError.mj_objectWithKeyValues(errorDic) as ETError
-                failedSel(error: [error])
+                failedSel(error: error)
             }
         }
     }

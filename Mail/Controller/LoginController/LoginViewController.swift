@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        NetworkTool.shareNetworkTool.loginRequest(userName.text!, password: password.text!, finishedSel: { (data:LoginData) in
+        NetworkTool.shareNetworkTool.loginRequest(userName.text!, password: password.text!, finishedSel: { (data:MemberData) in
             
             print("data:\(data)")
             
@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    func saveUserDefaults(data:LoginData){
+    func saveUserDefaults(data:MemberData){
         
         var defaults:NSUserDefaults!
         defaults = NSUserDefaults()

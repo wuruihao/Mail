@@ -60,9 +60,9 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func demo(){
-        let me  = MemberData(name: "吴瑞豪", sanp: "Login_male.png", level: "iOS工程师")
-        let me2  = MemberData(name: "瑞豪", sanp: "Login_male.png", level: "iOS工程师")
-        let me3  = MemberData(name: "豪", sanp: "Login_male.png", level: "iOS工程师")
+        let me  = MemberData1(name: "吴瑞豪", sanp: "Login_male.png", level: "iOS工程师")
+        let me2  = MemberData1(name: "瑞豪", sanp: "Login_male.png", level: "iOS工程师")
+        let me3  = MemberData1(name: "豪", sanp: "Login_male.png", level: "iOS工程师")
         dataSoure = [me,me2,me3]
         let array = [me,me2,me3]
         searchData = [me,me2,me3]
@@ -179,7 +179,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
             
             if shouldShowSearchResults == true {
                 
-                let data = searchData[indexPath.row] as! MemberData
+                let data = searchData[indexPath.row] as! MemberData1
                 cell.sanpImage.image = UIImage(named: data.memberSanp!)
                 cell.name.text = data.memberName
                 cell.subTitle.text = data.memberLevel
@@ -187,7 +187,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
             }else{
                 
                 let userSection = dataSoure.objectAtIndex(indexPath.section)
-                let data = userSection[indexPath.row] as! MemberData
+                let data = userSection[indexPath.row] as! MemberData1
                 cell.sanpImage.image = UIImage(named: data.memberSanp!)
                 cell.name.text = data.memberName
                 cell.subTitle.text = data.memberLevel
@@ -265,7 +265,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
      }
      */
     
-    func sortDataArray(dataArray:[MemberData]){
+    func sortDataArray(dataArray:[MemberData1]){
         
         dataSoure.removeAllObjects()
         sectionTitlesArray.removeAllObjects()
@@ -286,7 +286,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
-        for data:MemberData in dataArray {
+        for data:MemberData1 in dataArray {
             let ease = EaseChineseToPinyin()
             let firstLetter = ease.pinyinFromChineseString(data.memberName)
             let sectionH = indexCollation.sectionForObject((firstLetter as NSString).substringToIndex(1), collationStringSelector: #selector(self.uppercaseString) )

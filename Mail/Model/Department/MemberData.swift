@@ -70,10 +70,10 @@ class Department: NSObject {
     func demo(){
         
         let array = NSMutableArray()
-        let depa = MemberData(name: "吴瑞豪", sanp: "Login_male.png", level: "iOS工程师")
-        let depa2 = MemberData(name: "瑞豪", sanp: "Login_male.png", level: "iOS工程师")
-        let depa3 = MemberData(name: "吴豪", sanp: "Login_male.png", level: "iOS工程师")
-        let depa4 = MemberData(name: "吴瑞", sanp: "Login_male.png", level: "iOS工程师")
+        let depa = MemberData1(name: "吴瑞豪", sanp: "Login_male.png", level: "iOS工程师")
+        let depa2 = MemberData1(name: "瑞豪", sanp: "Login_male.png", level: "iOS工程师")
+        let depa3 = MemberData1(name: "吴豪", sanp: "Login_male.png", level: "iOS工程师")
+        let depa4 = MemberData1(name: "吴瑞", sanp: "Login_male.png", level: "iOS工程师")
         array.addObjectsFromArray([depa,depa2,depa3,depa4])
         members = array
     }
@@ -81,7 +81,7 @@ class Department: NSObject {
 }
 
 
-class MemberData: NSObject {
+class MemberData1: NSObject {
     
     var memberId : String?
     var memberName : String?

@@ -27,6 +27,11 @@ class DepartmentController: UIViewController ,UITableViewDataSource,UITableViewD
         tableView.separatorStyle = .None
     }
 
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
@@ -55,7 +60,7 @@ class DepartmentController: UIViewController ,UITableViewDataSource,UITableViewD
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cellId") as! ContactsCell
         let department = sectionData[indexPath.section] as! Department
-        let data = department.members?[indexPath.row] as! MemberData
+        let data = department.members?[indexPath.row] as! MemberData1
         cell.sanpImage.image = UIImage(named: data.memberSanp!)
         cell.name.text = data.memberName
         cell.subTitle.text = data.memberLevel

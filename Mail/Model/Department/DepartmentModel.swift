@@ -11,10 +11,9 @@ import UIKit
 
 class DepartmentData: NSObject {
     
-    var number:  String?
+    var id:      Int?
     var name:    String?
-    var icon:    String?
+    var number:  String?
     var members: NSArray?
-    var DepartmentId: String?
 }
 

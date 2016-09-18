@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginData: NSObject {
+class MemberData: NSObject {
     
     var id:         Int?
     var sex:        String?
