@@ -8,12 +8,17 @@
 
 import UIKit
 import CoreFoundation
-class ContactsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ContactsController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate{
     
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var searchController: UISearchController!
+    var shouldShowSearchResults = false
+    
     var dataSoure : NSMutableArray!
+    var searchData :NSArray!
     var sectionTitlesArray:NSMutableArray!
     
     override func viewDidLoad() {
@@ -26,6 +31,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib(nibName: "ContactsCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "contactsCell")
         
+        configureSearchController()
     }
     
     @IBAction func addContacts(sender: UIButton) {
@@ -39,43 +45,123 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
     }
     
+    func configureSearchController() {
+        
+        // 初始化搜索控制器，并且进行最小化的配置
+        searchController = UISearchController(searchResultsController: nil)
+        //searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search here..."
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        
+        // 放置 搜索条在 tableView的头部视图中
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
     func demo(){
         let me  = MemberData(name: "吴瑞豪", sanp: "Login_male.png", level: "iOS工程师")
         let me2  = MemberData(name: "瑞豪", sanp: "Login_male.png", level: "iOS工程师")
         let me3  = MemberData(name: "豪", sanp: "Login_male.png", level: "iOS工程师")
         dataSoure = [me,me2,me3]
         let array = [me,me2,me3]
+        searchData = [me,me2,me3]
         sectionTitlesArray = NSMutableArray()
         sortDataArray(array)
     }
     
     //实现索引数据源代理方法
     func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-      return sectionTitlesArray.mutableCopy() as? [String]
+        return sectionTitlesArray.mutableCopy() as? [String]
     }
     
     //点击索引，移动TableView的组位置
-     func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String,
-     atIndex index: Int) -> Int {
-     var tpIndex:Int = 0
-     //遍历索引值
-     for character in sectionTitlesArray{
-     //判断索引值和组名称相等，返回组坐标
-     if character as! String == title{
-     return tpIndex
-     }
-     tpIndex += 1
-     }
-     return 0
-     }
+    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String,
+                   atIndex index: Int) -> Int {
+        var tpIndex:Int = 0
+        //遍历索引值
+        for character in sectionTitlesArray{
+            //判断索引值和组名称相等，返回组坐标
+            if character as! String == title{
+                return tpIndex
+            }
+            tpIndex += 1
+        }
+        return 0
+    }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        shouldShowSearchResults = true
+        tableView.reloadData()
+    }
+
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        shouldShowSearchResults = false
+        tableView.reloadData()
+    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if !shouldShowSearchResults {
+            shouldShowSearchResults = true
+            tableView.reloadData()
+        }
+        
+        searchController.searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        let searchString = searchController.searchBar.text
+        // 刷新 tableView
+        tableView.reloadData()
+        
+    }
+    /*
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+        
+        let searchString = searchController.searchBar.text
+        /*
+        for i in 0 ... searchData.count {
+            
+            let data = searchData[i] as! MemberData
+            let range = data.memberName!.rangeOfString(searchString!)
+            
+            if range == nil {
+                searchData.removeObject(data)
+            }
+            
+        }
+ */
+        
+        for data:MemberData in searchData.mutableCopy() as! [MemberData] {
+            
+            let range = data.memberName!.rangeOfString(searchString!)
+            
+            if range == nil {
+                searchData.removeObject(data)
+            }
+        }
+        
+        // 刷新 tableView
+        tableView.reloadData()
+    }
+    */
     //设置分区数
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        if shouldShowSearchResults == true {
+            
+            return 1
+        }
         return dataSoure.count;
     }
     
     //返回表格行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if shouldShowSearchResults == true {
+            return searchData.count
+        }
         return dataSoure.objectAtIndex(section).count
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -91,12 +177,22 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCellWithIdentifier(identify, forIndexPath: indexPath)
                 as! ContactsCell
             
-            let userSection = dataSoure.objectAtIndex(indexPath.section)
-            let data = userSection[indexPath.row] as! MemberData
-            cell.sanpImage.image = UIImage(named: data.memberSanp!)
-            cell.name.text = data.memberName
-            cell.subTitle.text = data.memberLevel
-            return cell
+            if shouldShowSearchResults == true {
+                
+                let data = searchData[indexPath.row] as! MemberData
+                cell.sanpImage.image = UIImage(named: data.memberSanp!)
+                cell.name.text = data.memberName
+                cell.subTitle.text = data.memberLevel
+                return cell
+            }else{
+                
+                let userSection = dataSoure.objectAtIndex(indexPath.section)
+                let data = userSection[indexPath.row] as! MemberData
+                cell.sanpImage.image = UIImage(named: data.memberSanp!)
+                cell.name.text = data.memberName
+                cell.subTitle.text = data.memberLevel
+                return cell
+            }
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
@@ -112,6 +208,10 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
         return self.sectionTitlesArray[section] as? String
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if shouldShowSearchResults == true {
+            
+            return 0
+        }
         return kScreenHeight*0.05
     }
     
@@ -120,6 +220,11 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
         return 0.1
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if shouldShowSearchResults == true {
+            
+            return nil
+        }
         
         let view = UIView(frame: CGRectMake(0,0,kScreenWidth,kScreenHeight*0.05))
         view.backgroundColor = RGBA(242.0, g: 242.0, b: 242.0, a: 1.0)
@@ -161,7 +266,7 @@ class ContactsController: UIViewController, UITableViewDelegate, UITableViewData
      */
     
     func sortDataArray(dataArray:[MemberData]){
-    
+        
         dataSoure.removeAllObjects()
         sectionTitlesArray.removeAllObjects()
         

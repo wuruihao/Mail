@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        userName.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {

@@ -160,3 +160,26 @@ class ApplicationData: NSObject {
     }
 }
 
+class NotifyData: NSObject {
+    
+    var snap : String?
+    var name : String?
+    var time : String?
+    var status : String?
+    var title  : String?
+    var subTitle : String?
+    
+    
+    init(n:String,s:String,t:String,st:String,ti:String,subTi:String) {
+        
+        super.init()
+        
+        name = n
+        snap = s
+        time = t
+        status = st
+        title = ti
+        subTitle = subTi
+        
+    }
+}

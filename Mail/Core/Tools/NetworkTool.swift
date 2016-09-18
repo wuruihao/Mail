@@ -37,7 +37,7 @@ class NetworkTool: NSObject {
     //登陆请求
     func loginRequest(phone: String, password: String, finishedSel:(data: [LoginData])->(),failedSel:(error: [ETError])->()){
         
-        let url = BASE_URL+"/login/index"
+        let url = BASE_URL+"/login"
         let params = ["mobile": phone,
                       "password": password]
         print("url: \(url)")

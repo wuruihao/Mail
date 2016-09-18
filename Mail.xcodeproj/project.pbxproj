@@ -123,6 +123,9 @@
 		E0490FFB1D88F24F00E7107B /* MineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0490F881D88F24F00E7107B /* MineController.xib */; };
 		E0490FFC1D88F24F00E7107B /* ContactsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490F8A1D88F24F00E7107B /* ContactsEntity.swift */; };
 		E05203971D88F6990003A678 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05203961D88F6990003A678 /* Mail.swift */; };
+		E05203A01D8917B90003A678 /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E052039E1D8917B90003A678 /* RealtimeSearchUtil.m */; };
+		E05203A31D892F660003A678 /* NotifyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05203A11D892F660003A678 /* NotifyCell.swift */; };
+		E05203A41D892F660003A678 /* NotifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05203A21D892F660003A678 /* NotifyCell.xib */; };
 		E09536E11D88F0F5001FBEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09536E01D88F0F5001FBEEC /* AppDelegate.swift */; };
 		E09536E91D88F0F5001FBEEC /* Mail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E09536E71D88F0F5001FBEEC /* Mail.xcdatamodeld */; };
 		E09536EB1D88F0F6001FBEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09536EA1D88F0F6001FBEEC /* Assets.xcassets */; };
@@ -269,6 +272,10 @@
 		E0490F8A1D88F24F00E7107B /* ContactsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsEntity.swift; sourceTree = "<group>"; };
 		E05203961D88F6990003A678 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		E052039B1D88F7100003A678 /* Mail-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mail-Bridging-Header.h"; sourceTree = "<group>"; };
+		E052039E1D8917B90003A678 /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
+		E052039F1D8917B90003A678 /* RealtimeSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeSearchUtil.h; sourceTree = "<group>"; };
+		E05203A11D892F660003A678 /* NotifyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyCell.swift; sourceTree = "<group>"; };
+		E05203A21D892F660003A678 /* NotifyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyCell.xib; sourceTree = "<group>"; };
 		E09536DD1D88F0F4001FBEEC /* Mail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09536E01D88F0F5001FBEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E09536E81D88F0F5001FBEEC /* Mail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mail.xcdatamodel; sourceTree = "<group>"; };
@@ -361,6 +368,8 @@
 				E0490F051D88F24F00E7107B /* ApplicationCell.xib */,
 				E0490F061D88F24F00E7107B /* HomeCell.swift */,
 				E0490F071D88F24F00E7107B /* HomeCell.xib */,
+				E05203A11D892F660003A678 /* NotifyCell.swift */,
+				E05203A21D892F660003A678 /* NotifyCell.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -543,6 +552,8 @@
 		E0490F5D1D88F24F00E7107B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E052039E1D8917B90003A678 /* RealtimeSearchUtil.m */,
+				E052039F1D8917B90003A678 /* RealtimeSearchUtil.h */,
 				E0490F5E1D88F24F00E7107B /* EaseChineseToPinyin.h */,
 				E0490F5F1D88F24F00E7107B /* EaseChineseToPinyin.m */,
 				E0490F601D88F24F00E7107B /* FoldingTableView.swift */,
@@ -829,6 +840,7 @@
 				E0490FB81D88F24F00E7107B /* Mine_shoucang@3x.png in Resources */,
 				E0490F9B1D88F24F00E7107B /* notify.png in Resources */,
 				E0490F961D88F24F00E7107B /* pic.png in Resources */,
+				E05203A41D892F660003A678 /* NotifyCell.xib in Resources */,
 				E0490F931D88F24F00E7107B /* addContacts.png in Resources */,
 				E0490FA31D88F24F00E7107B /* Login_male@3x.png in Resources */,
 				E0490FB41D88F24F00E7107B /* Mine_quchu@2x.png in Resources */,
@@ -989,6 +1001,7 @@
 				E0490FD91D88F24F00E7107B /* LoginModel.swift in Sources */,
 				E0490FFA1D88F24F00E7107B /* MineController.swift in Sources */,
 				E0490FF81D88F24F00E7107B /* LoginViewController.swift in Sources */,
+				E05203A01D8917B90003A678 /* RealtimeSearchUtil.m in Sources */,
 				E0490FEA1D88F24F00E7107B /* DepartmentController.swift in Sources */,
 				E0490FD71D88F24F00E7107B /* DepartmentModel.swift in Sources */,
 				E0490FF41D88F24F00E7107B /* HomeController.swift in Sources */,
@@ -997,6 +1010,7 @@
 				E0490FDD1D88F24F00E7107B /* NSString+Extension.swift in Sources */,
 				E0490FF21D88F24F00E7107B /* EditApplyleaveController.swift in Sources */,
 				E0490FDF1D88F24F00E7107B /* UIImageView+Extension.swift in Sources */,
+				E05203A31D892F660003A678 /* NotifyCell.swift in Sources */,
 				E0490FE11D88F24F00E7107B /* UIView+Extension.swift in Sources */,
 				E0490FFC1D88F24F00E7107B /* ContactsEntity.swift in Sources */,
 				E0490FDE1D88F24F00E7107B /* UIImage+Extendion.swift in Sources */,

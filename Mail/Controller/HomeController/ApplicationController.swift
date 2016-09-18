@@ -60,8 +60,8 @@ class ApplicationController: UIViewController ,UITableViewDataSource, UITableVie
         let data4 =  ApplicationData(n: "程福兴", s: "chat.png", t: "09:10", st: "1", ti: "请假申请:3天", subTi: "PHP部门")
         
         dataSoure = NSMutableArray(objects: data1,data2,data3,data4)
-        
-    }
+            }
+
     func demoData2(){
         //未处理:0 被驳回:1 已批准:2 待我审批:3 已驳回:4 已审批:5
         let data1 =  ApplicationData(n: "陈华", s: "chat.png", t: "13:10", st: "3", ti: "请假申请:3天", subTi: "ios部门")

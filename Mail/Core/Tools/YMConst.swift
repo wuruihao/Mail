@@ -56,8 +56,7 @@ let version_code = "5.7.1"
 let YMTabBarDidSelectedNotification = "YMTabBarDidSelectedNotification"
 
 /// 服务器地址
-let BASE_URL = "http://meiyu-api.uduoo.com/a3"
-
+let BASE_URL = "http://l.www.linuxs.com"
 /// 第一次启动
 let YMFirstLaunch = "firstLaunch"
 /// 是否登录
