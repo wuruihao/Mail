@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,6 +131,7 @@
 		E0490FFA1D88F24F00E7107B /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490F871D88F24F00E7107B /* MineController.swift */; };
 		E0490FFB1D88F24F00E7107B /* MineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0490F881D88F24F00E7107B /* MineController.xib */; };
 		E0490FFC1D88F24F00E7107B /* ContactsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0490F8A1D88F24F00E7107B /* ContactsEntity.swift */; };
+		E0515A741D8F878F006ABFD1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0515A731D8F878F006ABFD1 /* SwiftyJSON.swift */; };
 		E05203971D88F6990003A678 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05203961D88F6990003A678 /* Mail.swift */; };
 		E05203A01D8917B90003A678 /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E052039E1D8917B90003A678 /* RealtimeSearchUtil.m */; };
 		E05203A31D892F660003A678 /* NotifyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05203A11D892F660003A678 /* NotifyCell.swift */; };
@@ -288,6 +289,7 @@
 		E0490F871D88F24F00E7107B /* MineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
 		E0490F881D88F24F00E7107B /* MineController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineController.xib; sourceTree = "<group>"; };
 		E0490F8A1D88F24F00E7107B /* ContactsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsEntity.swift; sourceTree = "<group>"; };
+		E0515A731D8F878F006ABFD1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E05203961D88F6990003A678 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		E052039B1D88F7100003A678 /* Mail-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mail-Bridging-Header.h"; sourceTree = "<group>"; };
 		E052039E1D8917B90003A678 /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
@@ -603,6 +605,7 @@
 		E0490F6A1D88F24F00E7107B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E0515A731D8F878F006ABFD1 /* SwiftyJSON.swift */,
 				E0490F6B1D88F24F00E7107B /* NetworkTool.swift */,
 				E0490F6C1D88F24F00E7107B /* YMConst.swift */,
 			);
@@ -835,7 +838,7 @@
 				};
 			};
 			buildConfigurationList = E09536D81D88F0F4001FBEEC /* Build configuration list for PBXProject "Mail" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1041,6 +1044,7 @@
 				E0490FF41D88F24F00E7107B /* HomeController.swift in Sources */,
 				E0490FDA1D88F24F00E7107B /* EaseChineseToPinyin.m in Sources */,
 				E0490FE21D88F24F00E7107B /* ETNavigationController.swift in Sources */,
+				E0515A741D8F878F006ABFD1 /* SwiftyJSON.swift in Sources */,
 				E0490FDD1D88F24F00E7107B /* NSString+Extension.swift in Sources */,
 				E0490FF21D88F24F00E7107B /* EditApplyleaveController.swift in Sources */,
 				E0490FDF1D88F24F00E7107B /* UIImageView+Extension.swift in Sources */,

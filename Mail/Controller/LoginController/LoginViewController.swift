@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
             self.saveUserDefaults(data)
             
             UIApplication.sharedApplication().keyWindow?.rootViewController = ETTabBarController()
-
+            
             
         }) { (error:ETError) in
             
@@ -90,15 +90,13 @@ class LoginViewController: UIViewController {
         
         var defaults:NSUserDefaults!
         defaults = NSUserDefaults()
- 
-        if data.id != nil {
-            defaults.setInteger(data.id! as Int, forKey: userID)
-        }
+        
+        defaults.setInteger(data.id as Int, forKey: userID)
         if data.sex != nil {
-             defaults.setObject(data.sex! as String, forKey: userSex)
+            defaults.setObject(data.sex! as String, forKey: userSex)
         }
         if data.mobile != nil {
-              defaults.setObject(data.mobile! as String, forKey: userMobile)
+            defaults.setObject(data.mobile! as String, forKey: userMobile)
         }
         if data.token != nil {
             defaults.setObject(data.token! as String, forKey: userToken)
